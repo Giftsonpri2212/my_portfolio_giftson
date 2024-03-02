@@ -21,6 +21,27 @@ body {
     align-self: flex-end;
 }
 
+.nav__title {
+    position: relative;
+}
+
+.nav__title span {
+    position: relative;
+    display: inline-block;
+    font-size: 30px;
+    color: #fff;
+
+    animation: flip 5s infinite;
+    animation-delay: calc(.2s * var(--i))
+}
+
+@keyframes flip {
+
+    0%,
+    80% {
+        transform: rotateY(360deg)
+    }
+}
 
 
 .navbar__title a {
@@ -33,14 +54,14 @@ body {
 .navbar__items {
     padding: 10px;
     display: flex;
-    gap: 30px;
+    gap: 35px;
     align-items: center;
     margin-left: 15%;
 }
 
 .navbar__items a {
     text-decoration: none;
-    font-size: large;
+    font-size: 22px;
     color: whitesmoke;
     transition: 1s;
     display: flex;
@@ -99,24 +120,128 @@ body {
   } */
 
 
+/* home icon */
+/* .icons__container__list {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 500px;
+    left: 350px;
+    width: fit-content;
+}
+
+
+ul {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li a {
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
+    margin: 0 10px;
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #fff;
+    z-index: 1;
+}
+
+ul li a .icon {
+    position: relative;
+    color: #262626;
+    transition: .5s;
+    z-index: 3;
+}
+
+ul li a:hover .icon {
+    color: #fff;
+    transform: rotateY(360deg);
+}
+
+ul li a:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f00;
+    transition: .5s;
+    z-index: 2;
+}
+
+ul li a:hover:before {
+    top: 0;
+}
+
+ul li:nth-child(1) a:before {
+    background: #3b5999;
+}
+
+ul li:nth-child(2) a:before {
+    background: #55acee;
+}
+
+ul li:nth-child(3) a:before {
+    background: #0077b5;
+}
+
+ul li:nth-child(4) a:before {
+    background: #dd4b39;
+} */
+
+/* home icon end */
+
 .description {
     padding: 30px;
     margin-top: 100px;
     margin-left: 20%;
-    width: 600px;
+    width: fit-content;
 }
 
 .description p {
     margin-top: 10px;
     font-size: large;
     color: whitesmoke;
-
-
 }
 
 .description h1 {
-    font-size: xxx-large;
-    color: #ffffff;
+    text-transform: uppercase;
+    background-image: linear-gradient(-225deg,
+            white 50%,
+            #191f36 55%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 4s linear infinite;
+    animation-delay: 2s;
+    display: inline-block;
+    font-size: 39px;
+    animation-direction: reverse;
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
 }
 
 
@@ -124,6 +249,27 @@ body {
     margin-top: 20px;
     color: #fa709a;
 }
+
+.description h2 span {
+    color: whitesmoke;
+    animation: description_h2_span_animation 6s ease-in-out 0s 1000000 normal backwards;
+
+}
+
+@keyframes description_h2_span_animation {
+
+    0%,
+    50%,
+    100% {
+        opacity: 1;
+    }
+
+    25%,
+    75% {
+        opacity: 0;
+    }
+}
+
 
 
 
@@ -146,6 +292,7 @@ body {
     cursor: pointer;
     font-weight: bold;
     transition: all 1s;
+
 }
 
 .buttons button:hover {
@@ -154,7 +301,10 @@ body {
     font-weight: bold;
     box-shadow: 0 0 20px #fa709a;
     transition: all 1s;
+
 }
+
+
 
 .description a {
     margin-top: 20px;
@@ -192,11 +342,38 @@ body {
 
 #me {
     color: #fa709a;
+    animation: About_title_animation 5s ease-in-out 0s 10000000 normal backwards;
+}
+
+@keyframes About_title_animation {
+    0% {
+        transform: translate(0);
+    }
+
+    20% {
+        transform: translate(2px, -2px);
+    }
+
+    40% {
+        transform: translate(2px, 2px);
+    }
+
+    60% {
+        transform: translate(-2px, 2px);
+    }
+
+    80% {
+        transform: translate(-2px, -2px);
+    }
+
+    100% {
+        transform: translate(0);
+    }
 }
 
 .about__container {
     padding: 0px;
-    width: 500px;
+    width: fit-content;
 
     border-radius: 20px;
     margin-top: 0;
@@ -220,14 +397,16 @@ body {
 .content__description {
     color: whitesmoke;
     margin-top: 20px;
+    width: 100%;
 
 }
 
-.competitve__programming__links{
+.competitve__programming__links {
 
     color: whitesmoke;
     text-decoration: none;
 }
+
 .img__section {
     width: 350px;
     height: 500px;
@@ -266,17 +445,48 @@ body {
     font-size: xxx-large;
     text-decoration: none;
     color: #ffffff;
-    box-shadow: #fa709a inset;
     transition: all .5s;
+    position: relative;
+    animation: Icons_container_animation 2s ease-in-out 0s 1 normal backwards;
+}
 
+@keyframes Icons_container_animation {
+    0% {
+        opacity: 0;
+        transform: translateX(250px) rotate(200deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0) rotate(0deg);
+    }
+}
+
+.Icons__container a:hover {
+    color: #fa709a;
 
 }
 
 
 
-.Icons__container a:hover {
-    color: #fa709a;
+.Icons__container a .Icons__container a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    /* Start the pseudo-element off the bottom of the link */
+    left: 0;
+    width: 100%;
+    height: 0;
+    /* Initially, the height is 0 */
+    background-color: whitesmoke;
+    /* Same as the box-shadow color */
+    transition: 0.5s;
+    /* Smooth transition for the height property */
+}
 
+.Icons__container a:hover::before {
+    height: 1%;
+    /* When hovered over, the height will be 100%, effectively filling the "bottle" */
 }
 
 .course__box {
@@ -284,11 +494,12 @@ body {
     flex-wrap: wrap;
     justify-content: center;
 
+
 }
 
 
 .skill__title {
-    font-size: 25px;
+    font-size: x-large;
     text-align: center;
     margin-top: 120px;
     display: flex;
@@ -303,7 +514,21 @@ body {
 
 .skill__title__2 {
     color: #fa709a;
+    animation: skill_title_animation 5s ease-in-out 0s infinite normal backwards;
+}
 
+@keyframes skill_title_animation {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 
@@ -311,6 +536,7 @@ body {
     padding: 20px;
     text-align: center;
     margin-top: 50px;
+    width: 800px;
 
 }
 
@@ -339,12 +565,12 @@ body {
 
 .skill__section-1 {
     margin-top: 10px;
-    padding: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 80px;
     color: whitesmoke;
+    width: 100%;
 }
 
 .skill__section-1 span {
@@ -377,10 +603,9 @@ body {
 
 .skill__section-2 {
     margin-top: 20px;
-    padding: 20px;
     display: flex;
     flex-wrap: wrap;
-
+    width: 100%;
     justify-content: center;
     gap: 80px;
     color: whitesmoke;
@@ -404,12 +629,12 @@ body {
 
 .skill__section-3 {
     margin-top: 20px;
-    padding: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 80px;
     color: whitesmoke;
+    width: 100%;
 }
 
 .skill__section-3 span {
@@ -471,8 +696,71 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
+.skill__section-1 span p{
+    /* Copy code to element you want to animate */
+animation: customAni 2s ease 0s infinite normal none;
+}
+/* Copy this code after the above code */
+@keyframes customAni {
+    0% {
+      transform: scale(1);
+    }
+  
+    50% {
+      transform: scale(1.1);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .skill__section-2 span p{
+    /* Copy code to element you want to animate */
+animation: customAni 2s ease 0s infinite normal none;
+}
+/* Copy this code after the above code */
+@keyframes customAni {
+    0% {
+      transform: scale(1);
+    }
+  
+    50% {
+      transform: scale(1.1);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
 
-/*
+
+  .skill__section-3 span p{
+    /* Copy code to element you want to animate */
+animation: customAni 2s ease 0s infinite normal none;
+}
+/* Copy this code after the above code */
+@keyframes customAni {
+    0% {
+      transform: scale(1);
+    }
+  
+    50% {
+      transform: scale(1.1);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+
+
+
+
+
+
+
+  /*
 .proj__body{
     margin: 0;
     padding: 0;
@@ -571,17 +859,55 @@ body {
 .project__title {
     color: #fa709a;
     font-size: xxx-large;
+}
 
+.project__title span {
+    color: whitesmoke;
 }
 
 
 .techstack__icon {
-    display: inline-flex;
+    display: flex;
     justify-content: center;
-    gap: 10px;
-    border-radius: 20px;
-    font-size: x-large;
-    align-self: center;
+    gap: 15px;
+    font-size: large;
+}
+
+.techstack__icon span i {
+    animation: project_icon_animation 5s cubic-bezier(0.25, 1, 0.5, 1) 0s infinite normal backwards;
+}
+
+@keyframes project_icon_animation {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+        transform-origin: 50% 50%;
+    }
+
+    10% {
+        transform: rotate(8deg);
+    }
+
+    20%,
+    40%,
+    60% {
+        transform: rotate(-10deg);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: rotate(10deg);
+    }
+
+    80% {
+        transform: rotate(-8deg);
+    }
+
+    90% {
+        transform: rotate(8deg);
+    }
 }
 
 .contact__content {
@@ -727,66 +1053,68 @@ body {
     margin-top: 300px;
 }
 
-.contact__footer{
+.contact__footer {
     padding: 20px;
     margin-top: 20px;
     background: #fa709a;
+
 }
 
-.contact__footer h2{
+.contact__footer h2 {
     font-size: 30px;
     text-align: center;
     color: #191f36;
 }
-.media{
+
+.media {
     margin-top: 20px;
     display: flex;
     justify-content: center;
     gap: 100px;
 }
 
-.media span i{
+.media span i {
     font-size: 38px;
     transition: .5s;
     color: #191f36;
 }
 
-.media span i:hover{
+.media span i:hover {
     color: whitesmoke;
     transition: .5s;
 }
 
-.contact__footer p{
+.contact__footer p {
     margin-top: 10px;
     text-align: center;
 }
 
-.contact__list{
+.contact__list {
     display: flex;
     justify-content: space-around;
     padding: 20px;
     margin-top: 10px;
 }
 
-.contact__list a{
+.contact__list a {
     text-decoration: none;
     color: whitesmoke;
     font-size: larger;
     transition: .5s;
 }
 
-.contact__list a:hover{
+.contact__list a:hover {
     color: #191f36;
     transition: .5s;
 }
 
-.contact__footer__para{
+.contact__footer__para {
     display: flex;
     justify-content: center;
     gap: 5px;
 }
 
-.footer__para__2{
+.footer__para__2 {
     color: whitesmoke;
 }
 
@@ -814,10 +1142,18 @@ body {
         display: none;
     }
 
+    .navbar__items a {
+        font-size: medium;
+    }
+
     .nav__hamburger span {
         display: flex;
         position: relative;
 
+    }
+
+    .nav__title span {
+        font-size: 25px;
     }
 
 
@@ -827,13 +1163,26 @@ body {
         justify-content: space-evenly;
     }
 
+    /* .icons__container__list{
+        left: 190px;
+        top: 400px;
+        font-size: small;
+    }
+
+    ul li a{
+        width: 40px;
+        height: 40px;
+        font-size: large;
+        line-height: 40pxk;
+    } */
+
 
 
     .showmenu {
         display: flex;
         flex-direction: column;
         justify-self: flex-end;
-        padding: 30px;
+        padding: 20px;
         background-color: #fa709a;
         margin: 10px;
         position: absolute;
@@ -843,6 +1192,11 @@ body {
         align-items: center;
         box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
         z-index: 1;
+    }
+
+    .showmenu a {
+        margin-top: 0;
+        padding: 0;
     }
 
     .description {
@@ -858,22 +1212,22 @@ body {
     }
 
     .description h1 {
-        font-size: 38px;
+        font-size: 30px;
     }
 
-    .buttons{
+    .buttons {
         gap: 10px;
     }
 
-    .buttons button{
+    .buttons button {
         font-size: 15px;
     }
 
-.Icons__container{
-    gap: 35px;
-}
+    .Icons__container {
+        gap: 35px;
+    }
 
-    .Icons__container a{
+    .Icons__container a {
         font-size: 40px;
     }
 
@@ -911,7 +1265,7 @@ body {
     }
 
     .skill__title {
-        font-size: larger;
+        font-size: 15px;
     }
 
     .skill__section-1 span {
@@ -946,6 +1300,7 @@ body {
 
     .skill__section-1 {
         gap: 40px;
+
     }
 
     .skill__section-2 {
@@ -954,23 +1309,31 @@ body {
 
     .skill__section-3 {
         gap: 40px;
+
     }
 
     .contact__form__container {
-        display: block;
-        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: fit-content;
     }
 
     .contact__content {
-        position: absolute;
-        top: 50px;
-        left: 20px;
+        margin-top: 0px;
+
     }
 
     .contact__form {
-        margin-left: 26%;
+        margin-left: 28%;
         width: 30%;
-        height: 250px;
+        height: 230px;
+        margin-top: 0px;
+        margin-bottom: 15px;
+    }
+
+    .contact__form h2 {
         margin-top: 20px;
     }
 
@@ -979,21 +1342,31 @@ body {
     }
 
     .content__para {
-        width: 350px;
+        width: fit-content;
     }
 
-    .contact__footer{
-        margin-top: 300px;
-    }
 
-    .media span i{
+
+
+    .media span i {
         font-size: 30px;
     }
-    .contact__footer h2{
+
+    .contact__footer h2 {
         font-size: 25px;
     }
-    
 
+    .contact__form h2 {
+        margin-top: 5px;
+    }
+
+    .media {
+        gap: 10px;
+    }
+
+    .media span i {
+        font-size: 20px;
+    }
 
 }
 
@@ -1004,7 +1377,7 @@ body {
     }
 
 
-    .home__whole{
+    .home__whole {
         width: 100%;
     }
 
@@ -1073,7 +1446,7 @@ body {
     .navbar {
         flex-direction: row;
         justify-content: space-between;
-        width: 100%
+
     }
 
     .navbar__items {
@@ -1104,39 +1477,42 @@ body {
         display: flex;
         flex-direction: column;
         align-self: flex-start;
-        padding: 30px;
+        padding: 20px;
         background-color: #fa709a;
         margin: 10px;
         position: absolute;
         top: 50px;
-        width: 100px;
+        width: 80px;
         align-items: center;
         box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
+        justify-content: center;
         z-index: 1;
     }
 
     .about__container__whole {
         flex-direction: column;
+        flex-wrap: wrap;
         margin-top: 30px;
         margin-left: 20px;
         align-items: flex-start;
-        width: fit-content;
+
     }
 
     .content {
-        width: 350px;
+        width: fit-content;
         margin-left: 20px;
     }
 
     .about__container {
-        width: fit-content;
+        width: 100%;
     }
 
     .about__title__container h1 {
         font-size: 40px;
         margin-left: 20px;
-        padding: 0px;
     }
+
+    .about__title__container {}
 
     .description {
         width: fit-content;
@@ -1147,27 +1523,27 @@ body {
         font-size: 29px;
     }
 
-    .description h2{
+    .description h2 {
         font-size: 19px;
     }
 
-    .content__description{
-    
+    .content__description {
+        width: 300px;
     }
 
-    .buttons{
+    .buttons {
         gap: 10px;
     }
 
-    .buttons button{
+    .buttons button {
         font-size: 15px;
     }
 
-.Icons__container{
-    gap: 35px;
-}
+    .Icons__container {
+        gap: 35px;
+    }
 
-    .Icons__container a{
+    .Icons__container a {
         font-size: 40px;
     }
 
@@ -1186,10 +1562,16 @@ body {
         width: fit-content;
     }
 
-    .skill__title {
-        font-size: larger;
-        text-align: center;
+    .skill__section {
+        width: 100%;
+        gap: 5px;
     }
+
+    .skill__title {
+        flex-wrap: wrap;
+    }
+
+    .skill__section-1 {}
 
     .skill__section-1 span {
         width: 5rem;
@@ -1227,13 +1609,14 @@ body {
 
     .skill__section-2 {
         gap: 40px;
+        flex-wrap: wrap;
     }
 
     .skill__section-3 {
         gap: 40px;
     }
 
-    .projects{
+    .projects {
         align-self: center;
         margin-left: 20px;
     }
@@ -1269,7 +1652,7 @@ body {
         height: 40%;
     }
 
-    .project-1 p{
+    .project-1 p {
         margin-top: 8px;
     }
 
@@ -1282,17 +1665,19 @@ body {
         font-size: 15px;
     }
 
-    .contact__content {
-        position: absolute;
-        top: 50px;
-        left: 20px;
-    }
+
 
     .contact__form {
-        width: 30%;
+        align-self: center;
+
+        margin-left: 80px;
         height: 250px;
-        margin-top: 20px;
-        
+
+    }
+
+    .contact__form__container {
+        justify-content: center;
+        align-items: center;
     }
 
     .contact__form h2 {
@@ -1311,74 +1696,48 @@ body {
         font-size: large;
     }
 
-    .contact__footer{
-        width: 100%;
-        padding: 20px;
-        
-    }
 
-    .contact__whole{
-        width: 100%;
-    }
+
+
     .contact__form__container {
-        display: block;
-        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
     }
 
-    .contact__content {
-        position: absolute;
-        top: 50px;
-        left: 20px;
+
+
+
+    .media span i {
+        font-size: 20px;
     }
 
-    .contact__form {
-        margin-left: 26%;
-        width: 30%;
-        height: 250px;
-        margin-top: 20px;
-    }
-
-    .contact__section__container {
-        width: 250px;
-    }
-
-    .content__para {
-        width: 350px;
-    }
-
-    .contact__footer{
-        margin-top: 300px;
-        margin-bottom: 0%;
-    }
-
-    .media span i{
-        font-size: 25px;
-    }
-    .contact__footer h2{
+    .contact__footer h2 {
         font-size: 20px;
         margin-top: 0px;
     }
 
-    .media{
+    .media {
         justify-content: center;
-        gap: 30px;
+        gap: 10px;
         margin-top: 10px;
     }
 
-    .contact__list{
+    .contact__list {
         justify-content: center;
-        gap: 10px;
-        margin-top: 0px;
+        gap: 15px;
+
     }
 
-    .contact__list a{
+    .contact__list a {
         font-size: 12px;
     }
 
-    .contact__footer__para{
+    .contact__footer__para {
         margin-top: -15px;
     }
-    
+
 
 
 }
