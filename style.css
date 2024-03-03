@@ -835,6 +835,9 @@ animation: customAni 2s ease 0s infinite normal none;
 
 
 
+  
+
+
 
 .project-1 h2:hover {
     color: #191f36;
@@ -1109,6 +1112,22 @@ animation: customAni 2s ease 0s infinite normal none;
     justify-content: space-around;
     padding: 20px;
     margin-top: 10px;
+}
+
+.contact__section img{
+    animation: contact_icon_animation 1.5s ease 0s infinite normal forwards;
+}
+
+@keyframes contact_icon_animation {
+	0% {
+		opacity: 0;
+		transform: translateX(-250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
 }
 
 .contact__list a {
