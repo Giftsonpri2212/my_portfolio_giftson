@@ -7,14 +7,22 @@ body {
     background-color: #191f36;
 }
 
+section{
+    padding-top: 20px;
+}
+
 .navbar {
+    position: sticky;
+    top: 0px;
     padding: 20px;
     display: flex;
     justify-content: center;
     gap: 10px;
     align-items: center;
-
-
+    background: #191f36;
+    box-shadow: black 0px 10px 50px;
+    z-index: 1;
+    
 }
 
 .nav__hamburger {
@@ -64,16 +72,15 @@ body {
     text-decoration: none;
     font-size: 22px;
     color: whitesmoke;
-    transition: 1s;
     display: flex;
+    border-bottom: #fa709a solid 1.5px;
 }
 
 .navbar__items a:hover {
 
-    color: #191f36;
-    background-color: #fa709a;
+    border: none;
     transition: all .5s;
-    box-shadow: 0 0 20px #fa709a;
+    
 }
 
 .nav__hamburger span {
@@ -206,11 +213,14 @@ ul li:nth-child(4) a:before {
 
 /* home icon end */
 
+
+
 .description {
     padding: 30px;
-    margin-top: 100px;
+    margin-top: 200px;
     margin-left: 20%;
-    width: fit-content;
+    
+   
 }
 
 .description p {
@@ -246,31 +256,28 @@ ul li:nth-child(4) a:before {
 }
 
 
-.description h2 {
+.roles {
     margin-top: 20px;
     color: #fa709a;
+    transition: 5s;
 }
 
-.description h2 span {
+.roles span {
     color: whitesmoke;
-    animation: descriptio_h2_span_animation 6s ease-in-out 0s 1000000 normal backwards;
+    animation: myAnim 3s ease 0s infinite normal forwards;
+    transition: all 5s;
 
 }
 
-@keyframes description_h2_span_animation {
+@keyframes myAnim {
+	0% {
+		opacity: 0;
+	}
 
-    0%,
-    50%,
-    100% {
-        opacity: 1;
-    }
-
-    25%,
-    75% {
-        opacity: 0;
-    }
+	100% {
+		opacity: 1;
+	}
 }
-
 
 
 
@@ -280,7 +287,33 @@ ul li:nth-child(4) a:before {
 
 }
 
-.buttons button {
+.home__button-1 {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 40px;
+    background-color: #fa709a;
+    color: #191f36;
+    border-width: 1px;
+    border-color: #fa709a;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 1s;
+    box-shadow: 0 0 20px #fa709a;
+
+}
+
+.home__button-1:hover {
+    color: #fa709a;
+    background-color: #191f36;
+    font-weight: bold;
+    box-shadow: 0 0 20px #fa709a;
+    transition: all 1s;
+
+}
+
+.home__button-2 {
     display: inline-block;
     border-radius: 5px;
     padding: 10px;
@@ -296,7 +329,7 @@ ul li:nth-child(4) a:before {
 
 }
 
-.buttons button:hover {
+.home__button-2:hover {
     color: #191f36;
     background-color: #fa709a;
     font-weight: bold;
@@ -304,8 +337,6 @@ ul li:nth-child(4) a:before {
     transition: all 1s;
 
 }
-
-
 
 .description a {
     margin-top: 20px;
@@ -315,19 +346,7 @@ ul li:nth-child(4) a:before {
     width: fit-content;
 }
 
-.footer {
 
-
-    padding: 10px;
-    color: whitesmoke;
-    margin-top: 50px;
-    margin-left: 20px;
-    position: fixed;
-    width: 220px;
-    box-shadow: 0 0 10px #fa709a;
-
-
-}
 
 .about__title__container {
     display: flex;
@@ -343,7 +362,7 @@ ul li:nth-child(4) a:before {
 
 #me {
     color: #fa709a;
-    animation: About_title_animation 5s ease-in-out 0s 10000000 normal backwards;
+    animation: About_title_animation 5s ease-in-out 0s 10000000 normal;
 }
 
 @keyframes About_title_animation {
@@ -391,7 +410,7 @@ ul li:nth-child(4) a:before {
     justify-content: center;
     gap: 20px;
     margin: 60px;
-    margin-top: 100px;
+    margin-top: 180px;
 }
 
 .content__description {
@@ -445,7 +464,6 @@ ul li:nth-child(4) a:before {
     text-decoration: none;
     color: #ffffff;
     transition: all .5s;
-    position: relative;
     animation: Icons_container_animation 2s ease-in-out 0s 1 normal backwards;
 }
 
@@ -500,7 +518,7 @@ ul li:nth-child(4) a:before {
 .skill__title {
     font-size: x-large;
     text-align: center;
-    margin-top: 120px;
+    margin-top: 180px;
     display: flex;
     justify-content: center;
     align-self: center;
@@ -794,7 +812,7 @@ ul li:nth-child(4) a:before {
 .projects {
     padding: 10px;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 180px;
 
 
 }
