@@ -435,11 +435,15 @@
 </body>
 
 <script>
-    const menu = document.querySelector('.nav__hamburger')
-    const menuList = document.querySelector('.navbar__items')
-    menu.addEventListener('click', () => {
-        menuList.classList.toggle('showmenu')
-    })
+    document.addEventListener('DOMContentLoaded', function () {
+        const menu = document.querySelector('.nav__hamburger');
+        const menuList = document.querySelector('.navbar__items');
+
+        menu.addEventListener('click', () => {
+            menuList.classList.toggle('showmenu');
+        });
+    });
 </script>
+
 
 </html>
