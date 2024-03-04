@@ -32,11 +32,11 @@ body {
     font-size: 30px;
     color: #fff;
 
-    animation: flip 5s infinite;
+    animation: nav_name 5s infinite;
     animation-delay: calc(.2s * var(--i))
 }
 
-@keyframes flip {
+@keyframes nav_name {
 
     0%,
     80% {
@@ -232,14 +232,14 @@ ul li:nth-child(4) a:before {
     text-fill-color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: textclip 4s linear infinite;
+    animation: home_name_animation 4s linear infinite;
     animation-delay: 2s;
     display: inline-block;
     font-size: 39px;
     animation-direction: reverse;
 }
 
-@keyframes textclip {
+@keyframes home_name_animation {
     to {
         background-position: 200% center;
     }
@@ -253,7 +253,7 @@ ul li:nth-child(4) a:before {
 
 .description h2 span {
     color: whitesmoke;
-    animation: description_h2_span_animation 6s ease-in-out 0s 1000000 normal backwards;
+    animation: descriptio_h2_span_animation 6s ease-in-out 0s 1000000 normal backwards;
 
 }
 
@@ -375,7 +375,7 @@ ul li:nth-child(4) a:before {
 .about__container {
     padding: 0px;
     width: 600px;
-    
+
     border-radius: 20px;
     margin-top: 0;
 }
@@ -695,87 +695,89 @@ ul li:nth-child(4) a:before {
     -webkit-text-fill-color: transparent;
 }
 
-.skill__section-1 span p{
-    /* Copy code to element you want to animate */
-animation: customAni 2s ease 0s infinite normal none;
+.skill__section-1 span p {
+
+    animation: customAni 2s ease 0s infinite normal none;
 }
-/* Copy this code after the above code */
+
 @keyframes customAni {
     0% {
-      transform: scale(1);
+        transform: scale(1);
     }
-  
+
     50% {
-      transform: scale(1.1);
+        transform: scale(1.1);
     }
-  
+
     100% {
-      transform: scale(1);
+        transform: scale(1);
     }
-  }
-  
-  .skill__section-2 span p{
-    /* Copy code to element you want to animate */
-animation: customAni 2s ease 0s infinite normal none;
 }
-/* Copy this code after the above code */
+
+.skill__section-2 span p {
+
+    animation: customAni 2s ease 0s infinite normal none;
+}
+
 @keyframes customAni {
     0% {
-      transform: scale(1);
+        transform: scale(1);
     }
-  
+
     50% {
-      transform: scale(1.1);
+        transform: scale(1.1);
     }
-  
+
     100% {
-      transform: scale(1);
+        transform: scale(1);
     }
-  }
-
-
-  .skill__section-3 span p{
-    /* Copy code to element you want to animate */
-animation: customAni 2s ease 0s infinite normal none;
 }
-/* Copy this code after the above code */
+
+
+.skill__section-3 span p {
+
+    animation: customAni 2s ease 0s infinite normal none;
+}
+
 @keyframes customAni {
     0% {
-      transform: scale(1);
+        transform: scale(1);
     }
-  
+
     50% {
-      transform: scale(1.1);
+        transform: scale(1.1);
     }
-  
+
     100% {
-      transform: scale(1);
+        transform: scale(1);
     }
-  }
+}
 
-    .skill__section-1 span img, .skill__section-2 span img, .skill__section-3 span img{
-        animation: skill_image_animation 2s ease 0s 1 normal forwards;
-    }
+.skill__section-1 span img,
+.skill__section-2 span img,
+.skill__section-3 span img {
+    animation: skill_image_animation 2s ease 0s 1 normal forwards;
+}
 
-    @keyframes skill_image_animation {
-        0% {
-            opacity: 0;
-            transform: rotateX(70deg);
-            transform-origin: top;
-        }
-    
-        100% {
-            opacity: 1;
-            transform: rotateX(0deg);
-            transform-origin: top;
-        }
+@keyframes skill_image_animation {
+    0% {
+        opacity: 0;
+        transform: rotateX(70deg);
+        transform-origin: top;
     }
 
+    100% {
+        opacity: 1;
+        transform: rotateX(0deg);
+        transform-origin: top;
+    }
+}
 
 
 
 
-  /*
+
+/*
 .proj__body{
     margin: 0;
     padding: 0;
@@ -835,7 +837,7 @@ animation: customAni 2s ease 0s infinite normal none;
 
 
 
-  
+
 
 
 
@@ -1095,6 +1097,53 @@ animation: customAni 2s ease 0s infinite normal none;
     font-size: 38px;
     transition: .5s;
     color: #191f36;
+    animation: media_span_ani 2s ease 0s 1 normal forwards;
+}
+
+@keyframes media_span_ani {
+    0% {
+        animation-timing-function: ease-in;
+        opacity: 1;
+        transform: translateY(-45px);
+    }
+
+    24% {
+        opacity: 1;
+    }
+
+    40% {
+        animation-timing-function: ease-in;
+        transform: translateY(-24px);
+    }
+
+    65% {
+        animation-timing-function: ease-in;
+        transform: translateY(-12px);
+    }
+
+    82% {
+        animation-timing-function: ease-in;
+        transform: translateY(-6px);
+    }
+
+    93% {
+        animation-timing-function: ease-in;
+        transform: translateY(-4px);
+    }
+
+    25%,
+    55%,
+    75%,
+    87% {
+        animation-timing-function: ease-out;
+        transform: translateY(0px);
+    }
+
+    100% {
+        animation-timing-function: ease-out;
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 
 .media span i:hover {
@@ -1114,20 +1163,20 @@ animation: customAni 2s ease 0s infinite normal none;
     margin-top: 10px;
 }
 
-.contact__section img{
+.contact__section img {
     animation: contact_icon_animation 1.5s ease 0s infinite normal forwards;
 }
 
 @keyframes contact_icon_animation {
-	0% {
-		opacity: 0;
-		transform: translateX(-250px);
-	}
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
 
-	100% {
-		opacity: 1;
-		transform: translateX(0);
-	}
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .contact__list a {
@@ -1664,7 +1713,6 @@ animation: customAni 2s ease 0s infinite normal none;
         flex-grow: 2;
         flex-basis: 40%;
         justify-content: center;
-
     }
 
     .project-1___container {
@@ -1699,14 +1747,10 @@ animation: customAni 2s ease 0s infinite normal none;
         font-size: 15px;
     }
 
-
-
     .contact__form {
         align-self: center;
-
         margin-left: 80px;
         height: 250px;
-
     }
 
     .contact__form__container {
@@ -1730,18 +1774,12 @@ animation: customAni 2s ease 0s infinite normal none;
         font-size: large;
     }
 
-
-
-
     .contact__form__container {
         display: flex;
         flex-direction: column;
         justify-content: center;
 
     }
-
-
-
 
     .media span i {
         font-size: 20px;
@@ -1771,7 +1809,4 @@ animation: customAni 2s ease 0s infinite normal none;
     .contact__footer__para {
         margin-top: -15px;
     }
-
-
-
 }
